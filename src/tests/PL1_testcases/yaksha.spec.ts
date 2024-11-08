@@ -47,7 +47,7 @@ test.describe("Yaksha", () => {
       expect(await utilitiesPage.verifyBillingCounterLoadState()).toBeTruthy();
     });
   });
-
+ });
 
 //     test("TS-3 Patient Search with Valid Data ", async () => {
 //       await appointmentPage.navigateToAppointmentPage();
