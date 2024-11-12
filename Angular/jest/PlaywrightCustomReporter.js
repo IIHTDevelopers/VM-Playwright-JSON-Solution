@@ -36,7 +36,7 @@ class PlaywrightCustomReporter {
 
     // Read custom data if exists
     try {
-      const data = fs.readFileSync('../custom.ih', 'utf8');
+      const data = fs.readFileSync('../../custom.ih', 'utf8');
       customData = data;
     } catch (err) {
       console.error(err);
