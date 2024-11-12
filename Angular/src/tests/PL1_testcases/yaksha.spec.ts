@@ -47,99 +47,98 @@ test.describe("Yaksha", () => {
       expect(await utilitiesPage.verifyBillingCounterLoadState()).toBeTruthy();
     });
   });
- });
 
-//     test("TS-3 Patient Search with Valid Data ", async () => {
-//       await appointmentPage.navigateToAppointmentPage();
-//       const patientName = await appointmentPage.selectFirstPatient();
-//       await appointmentPage.searchPatient(patientName);
-//       await appointmentPage.verifypatientName(patientName);
-//     });
+  test("TS-3 Patient Search with Valid Data ", async () => {
+    await appointmentPage.navigateToAppointmentPage();
+    const patientName = await appointmentPage.selectFirstPatient();
+    await appointmentPage.searchPatient(patientName);
+    await appointmentPage.verifypatientName(patientName);
+  });
 
-//     test("TS-4 Activate Counter in Dispensar", async () => {
-//       expect(
-//         await dispensaryPage.verifyActiveCounterMessageInDispensary()
-//       ).toBeTruthy();
-//     });
+  test("TS-4 Activate Counter in Dispensar", async () => {
+    expect(
+      await dispensaryPage.verifyActiveCounterMessageInDispensary()
+    ).toBeTruthy();
+  });
 
-//     test("TS-5 Purchase Request List Load", async () => {
-//       expect(
-//         await procurementPage.verifyPurchaseRequestListElements()
-//       ).toBeTruthy();
-//     });
+  test("TS-5 Purchase Request List Load", async () => {
+    expect(
+      await procurementPage.verifyPurchaseRequestListElements()
+    ).toBeTruthy();
+  });
 
-//     test("TS-6 Verify error message while adding new lab test in Laboratory", async () => {
-//       expect(await laboratoryPage.verifyErrorMessage()).toEqual(
-//         "Lab Test Code Required."
-//       );
-//     });
+  test("TS-6 Verify error message while adding new lab test in Laboratory", async () => {
+    expect(await laboratoryPage.verifyErrorMessage()).toEqual(
+      "Lab Test Code Required."
+    );
+  });
 
-//     test("TS-7 Handle Alert on Radiology Module", async () => {
-//       expect(
-//         await radiologyPage.performRadiologyRequestAndHandleAlert("01-01-2020")
-//       ).toBeTruthy();
-//     });
+  test("TS-7 Handle Alert on Radiology Module", async () => {
+    expect(
+      await radiologyPage.performRadiologyRequestAndHandleAlert("01-01-2020")
+    ).toBeTruthy();
+  });
 
-//     test("TS-8 Data-Driven Testing for Patient Search", async () => {
-//       expect(await patientPage.searchAndVerifyPatients()).toBeTruthy();
-//     });
+  test("TS-8 Data-Driven Testing for Patient Search", async () => {
+    expect(await patientPage.searchAndVerifyPatients()).toBeTruthy();
+  });
 
-//     test("TS-9 Error Handling and Logging in Purchase Request List", async () => {
-//       expect(
-//         await procurementPage.verifyNoticeMessageAfterEnteringIncorrectFilters()
-//       ).toEqual("Date is not between Range. Please enter again");
-//     });
+  test("TS-9 Error Handling and Logging in Purchase Request List", async () => {
+    expect(
+      await procurementPage.verifyNoticeMessageAfterEnteringIncorrectFilters()
+    ).toEqual("Date is not between Range. Please enter again");
+  });
 
-//     test("TS-10 Keyword-Driven Framework for Appointment Search", async ({
-//       page,
-//     }) => {
-//       expect(await appointmentPage.searchAndVerifyPatient()).toBeTruthy();
-//     });
+  test("TS-10 Keyword-Driven Framework for Appointment Search", async ({
+    page,
+  }) => {
+    expect(await appointmentPage.searchAndVerifyPatient()).toBeTruthy();
+  });
 
-//     test("TS-11 Modular Script for Patient Search", async () => {
-//       expect(await appointmentPage.searchPatientInAppointment()).toBeTruthy();
-//       expect(await patientPage.searchPatientInPatientPage()).toBeTruthy();
-//       expect(await adtPage.searchPatientInADT()).toBeTruthy();
-//     });
+  test("TS-11 Modular Script for Patient Search", async () => {
+    expect(await appointmentPage.searchPatientInAppointment()).toBeTruthy();
+    expect(await patientPage.searchPatientInPatientPage()).toBeTruthy();
+    expect(await adtPage.searchPatientInADT()).toBeTruthy();
+  });
 
-//     test("TS-12 Verify Assertion for Counter Activation", async () => {
-//       expect.soft(await dispensaryPage.verifyCounterisActivated()).toBeTruthy();
-//     });
+  test("TS-12 Verify Assertion for Counter Activation", async () => {
+    expect.soft(await dispensaryPage.verifyCounterisActivated()).toBeTruthy();
+  });
 
-//     test("TS-14 Verify Locator Strategy for Appointment Search ", async () => {
-//       expect(await appointmentPage.searchAndVerifyPatientList()).toBeTruthy();
-//     });
+  test("TS-14 Verify Locator Strategy for Appointment Search ", async () => {
+    expect(await appointmentPage.searchAndVerifyPatientList()).toBeTruthy();
+  });
 
-//     test("TS-15 Verify the tooltip and it's text present on hover the mouse on Star icon in Laboratory", async () => {
-//       expect(await laboratoryPage.verifyStarTooltip()).toEqual(
-//         "Remember this Date"
-//       );
-//     });
+  test("TS-15 Verify the tooltip and it's text present on hover the mouse on Star icon in Laboratory", async () => {
+    expect(await laboratoryPage.verifyStarTooltip()).toEqual(
+      "Remember this Date"
+    );
+  });
 
-//     test("TS-16 Navigation Exception Handling on Dispensary Page ", async () => {
-//       expect(await dispensaryPage.navigateToDispensary()).toBeTruthy();
-//     });
+  test("TS-16 Navigation Exception Handling on Dispensary Page ", async () => {
+    expect(await dispensaryPage.navigateToDispensary()).toBeTruthy();
+  });
 
-//     test("TS-17 Web Element Handling for Dropdowns in Purchase Request", async () => {
-//       const fromDate = "01-01-2020";
-//       const getDate = new Date().getDate();
-//       const getMonth = new Date().getMonth();
-//       const getYear = new Date().getFullYear();
-//       console.log(`${getDate}-${getMonth}-${getYear}`);
-//       expect(
-//         await procurementPage.verifyRequestedDateCoulumnDateWithinRange(
-//           fromDate,
-//           `${getDate}-${getMonth}-${getYear}`
-//         )
-//       ).toBeTruthy();
-//     });
+  test("TS-17 Web Element Handling for Dropdowns in Purchase Request", async () => {
+    const fromDate = "01-01-2020";
+    const getDate = new Date().getDate();
+    const getMonth = new Date().getMonth();
+    const getYear = new Date().getFullYear();
+    console.log(`${getDate}-${getMonth}-${getYear}`);
+    expect(
+      await procurementPage.verifyRequestedDateCoulumnDateWithinRange(
+        fromDate,
+        `${getDate}-${getMonth}-${getYear}`
+      )
+    ).toBeTruthy();
+  });
 
-//     test("TS-18 Login with invalid credentials", async () => {
-//       let username: string = "adminfr";
-//       let password: string = "jadfhfa";
-//       expect(
-//         await loginPage.performLoginWithInvalidCredentials(username, password)
-//       ).toEqual("Invalid credentials !");
-//     });
-//   });
-// });
+  test("TS-18 Login with invalid credentials", async () => {
+    let username: string = "adminfr";
+    let password: string = "jadfhfa";
+    expect(
+      await loginPage.performLoginWithInvalidCredentials(username, password)
+    ).toEqual("Invalid credentials !");
+  });
+});
+});
