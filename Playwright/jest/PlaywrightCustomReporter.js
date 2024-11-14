@@ -7,7 +7,7 @@ let customData = '';
 class TestCaseResultDto {
     constructor() {
         this.methodName = '';
-        this.methodType = '';
+        this.methodType = 'boundary';
         this.actualScore = 0;
         this.earnedScore = 0;
         this.status = '';
@@ -70,7 +70,7 @@ class PlaywrightCustomReporter {
 
         let testCaseResult_Dto = new TestCaseResultDto();
         testCaseResult_Dto.methodName = camelCase(testName);
-        testCaseResult_Dto.methodType = fileName;
+        testCaseResult_Dto.methodType = 'boundary';
         testCaseResult_Dto.actualScore = 1;
         testCaseResult_Dto.earnedScore = resultScore;
         testCaseResult_Dto.status = resultStatus;
